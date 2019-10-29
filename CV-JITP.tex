@@ -1,0 +1,164 @@
+%!TEX TS-program = xelatex
+\def\job-name{prueba}
+\documentclass[]{friggeri-cv}
+
+% To compile run twice the command:
+% $> lualatex CV-JITP.tex
+% CV-JITP.tex is the name of this file
+
+% Define language to select between english and spanish
+% 0 for spanish
+%\def\cvlanguage{0}
+% 1 for english
+%\def\cvlanguage{1}
+
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+\usepackage{verbatim}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    %set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {lightgray, materialcyan, orange, materialorange, green, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\newcommand\CVheader[1]{
+  \ifcase#1\relax
+    \input{inc/sp/header.tex}
+  \else
+    \input{inc/en/header.tex}
+  \fi
+}
+
+\newcommand\CVsinopsisyobjetivos[1]{
+  \ifcase#1\relax
+    \input{inc/sp/aside1.tex}
+    ~
+    \input{inc/sp/sinopsis.tex}
+    ~
+    \input{inc/sp/objetivos.tex}
+  \else
+    \input{inc/en/aside1.tex}
+    ~
+    \input{inc/en/sinopsis.tex}
+    ~
+    \input{inc/en/objetivos.tex}
+  \fi
+}
+
+\newcommand\CVexperiencia[1]{
+  \ifcase#1\relax
+    \input{inc/sp/experiencia.tex}
+  \else
+    \input{inc/en/experiencia.tex}
+  \fi
+}
+
+\newcommand\CVconsultoria[1]{
+  \ifcase#1\relax
+    \input{inc/sp/aside3.tex}
+    \input{inc/sp/consultoria.tex}
+  \else
+    \input{inc/en/aside3.tex}
+    \input{inc/en/consultoria.tex}
+  \fi
+    ~
+}
+
+\newcommand\CVpedagogia[1]{
+  \ifcase#1\relax
+    \input{inc/sp/pedagogia.tex}
+  \else
+    \input{inc/en/pedagogia.tex}
+  \fi
+}
+
+\newcommand\CVeducacion[1]{
+  \ifcase#1\relax
+    \input{inc/sp/aside4.tex}
+
+    \input{inc/sp/educacion.tex}
+  \else
+    \input{inc/en/aside4.tex}
+
+    \input{inc/en/educacion.tex}
+  \fi
+}
+
+\newcommand\CVlogros[1]{
+  \ifcase#1\relax
+    \input{inc/sp/logros.tex}
+
+    \input{inc/sp/opensource.tex}
+  \else
+    \input{inc/en/logros.tex}
+
+    \input{inc/en/opensource.tex}
+  \fi
+}
+
+\newcommand\CV[1]{
+    \CVheader{#1}
+
+    \CVsinopsisyobjetivos{#1}
+    % In the aside, each new line forces a line break
+    ~
+    \CVexperiencia{#1}
+
+    \CVconsultoria{#1}
+
+    \CVpedagogia{#1}
+
+    \CVeducacion{#1}
+
+    \CVlogros{#1}
+}
+
+%\section{Certifications}
+%\begin{entrylist}
+%  \entry
+%    {02/2013}
+%    {Intro to Computer Science}
+%    {Udacity. E-learning}
+%    {\emph{Building a Python Search Engine}}
+%\end{entrylist}
+
+\begin{document}
+  \CV{\cvlanguage}
+\end{document}
