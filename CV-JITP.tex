@@ -102,6 +102,7 @@
 }
 
 \newcommand\CVpedagogia[1]{
+  \input{inc/en/aside4.tex}
   \ifcase#1\relax
     \input{inc/sp/pedagogia.tex}
   \else
@@ -110,13 +111,10 @@
 }
 
 \newcommand\CVeducacion[1]{
+  \input{inc/en/aside5.tex}
   \ifcase#1\relax
-    \input{inc/sp/aside4.tex}
-
     \input{inc/sp/educacion.tex}
   \else
-    \input{inc/en/aside4.tex}
-
     \input{inc/en/educacion.tex}
   \fi
 }
@@ -124,11 +122,15 @@
 \newcommand\CVlogros[1]{
   \ifcase#1\relax
     \input{inc/sp/logros.tex}
-
-    \input{inc/sp/opensource.tex}
   \else
     \input{inc/en/logros.tex}
+  \fi
 
+  \input{inc/en/aside6.tex}
+
+  \ifcase#1\relax
+    \input{inc/sp/opensource.tex}
+  \else
     \input{inc/en/opensource.tex}
   \fi
 }
