@@ -135,6 +135,14 @@
   \fi
 }
 
+\newcommand\CVaboutme[1]{
+  \ifcase#1\relax
+    \input{inc/sp/aboutme.tex}
+  \else
+    \input{inc/en/aboutme.tex}
+  \fi
+}
+
 \newcommand\CV[1]{
     \CVheader{#1}
 
@@ -150,16 +158,9 @@
     \CVeducacion{#1}
 
     \CVlogros{#1}
-}
 
-%\section{Certifications}
-%\begin{entrylist}
-%  \entry
-%    {02/2013}
-%    {Intro to Computer Science}
-%    {Udacity. E-learning}
-%    {\emph{Building a Python Search Engine}}
-%\end{entrylist}
+    \CVaboutme{#1}
+}
 
 \begin{document}
   \CV{\cvlanguage}
