@@ -13,9 +13,9 @@ else
     lualatex "\def\cvlanguage{$1}\input CV-JITP.tex" 
     lualatex "\def\cvlanguage{$1}\input CV-JITP.tex"
     if [ $1 -eq 0 ]; then
-        mv CV-JITP.pdf CV-JITPSp.pdf
+        mv CV-JITP.pdf CV-JFJBESp.pdf
     elif [ $1 -eq 1 ]; then
-        mv CV-JITP.pdf CV-JITPEn.pdf
+        mv CV-JITP.pdf CV-JFJBEn.pdf
     fi
     rm *.out *.run.xml *.log *.aux *.bcf
 fi

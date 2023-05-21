@@ -23,6 +23,7 @@
 \usepackage{dtklogos}
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
+\usepackage{comment}
 \usetikzlibrary{mindmap,shadows}
 \hypersetup{
     pdftitle={},
@@ -87,9 +88,9 @@
     \input{inc/sp/experiencia.tex}
   \else
     \input{inc/en/experiencia.tex}
+    \newpage
   \fi
 }
-
 \newcommand\CVconsultoria[1]{
   \ifcase#1\relax
     \input{inc/sp/aside3.tex}
@@ -97,6 +98,7 @@
   \else
     \input{inc/en/aside3.tex}
     \input{inc/en/consultoria.tex}
+    \newpage
   \fi
     ~
 }
@@ -107,6 +109,7 @@
     \input{inc/sp/pedagogia.tex}
   \else
     \input{inc/en/pedagogia.tex}
+    \newpage
   \fi
 }
 
@@ -135,16 +138,6 @@
   \fi
 }
 
-\newcommand\CVaboutme[1]{
-  \ifcase#1\relax
-    \input{inc/sp/aside7.tex}
-    \input{inc/sp/aboutme.tex}
-  \else
-    \input{inc/en/aside7.tex}
-    \input{inc/en/aboutme.tex}
-  \fi
-}
-
 \newcommand\CV[1]{
     \CVheader{#1}
 
@@ -160,8 +153,6 @@
     \CVeducacion{#1}
 
     \CVlogros{#1}
-
-    \CVaboutme{#1}
 }
 
 \begin{document}
