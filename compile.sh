@@ -10,12 +10,12 @@ if [ $# -eq 0 ]; then
 elif [ $1 -qe 1 ]; then
     echo "Parameter must be 0 or 1: 0 spanish, 1 english"
 else
-    lualatex "\def\cvlanguage{$1}\input CV-JITP.tex" 
-    lualatex "\def\cvlanguage{$1}\input CV-JITP.tex"
+    lualatex "\def\cvlanguage{$1}\input CV-JFJ.tex"
+    lualatex "\def\cvlanguage{$1}\input CV-JFJ.tex"
     if [ $1 -eq 0 ]; then
-        mv CV-JITP.pdf CV-JFJBESp.pdf
+        mv CV-JFJ.pdf CV-JFJESp.pdf
     elif [ $1 -eq 1 ]; then
-        mv CV-JITP.pdf CV-JFJBEn.pdf
+        mv CV-JFJ.pdf CV-JFJEn.pdf
     fi
     rm *.out *.run.xml *.log *.aux *.bcf
 fi
