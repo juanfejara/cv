@@ -98,19 +98,20 @@
   \else
     \input{inc/en/aside3.tex}
     \input{inc/en/consultoria.tex}
-    \newpage
   \fi
+  \newpage
   ~
 }
 
 \newcommand\CVpedagogia[1]{
-  \input{inc/en/aside4.tex}
   \ifcase#1\relax
+    \input{inc/sp/aside4.tex}
     \input{inc/sp/pedagogia.tex}
   \else
+    \input{inc/en/aside4.tex}
     \input{inc/en/pedagogia.tex}
-    \newpage
   \fi
+  \newpage
 }
 
 \newcommand\CVeducacion[1]{
