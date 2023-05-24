@@ -13,7 +13,7 @@ else
     lualatex "\def\cvlanguage{$1}\input CV-JFJ.tex"
     lualatex "\def\cvlanguage{$1}\input CV-JFJ.tex"
     if [ $1 -eq 0 ]; then
-        mv CV-JFJ.pdf CV-JFJESp.pdf
+        mv CV-JFJ.pdf CV-JFJSp.pdf
     elif [ $1 -eq 1 ]; then
         mv CV-JFJ.pdf CV-JFJEn.pdf
     fi
