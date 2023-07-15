@@ -86,6 +86,7 @@
 \newcommand\CVexperiencia[1]{
   \ifcase#1\relax
     \input{inc/sp/experiencia.tex}
+    \input{inc/sp/aside2.tex}
   \else
     \input{inc/en/experiencia.tex}
     \newpage
@@ -93,8 +94,8 @@
 }
 \newcommand\CVconsultoria[1]{
   \ifcase#1\relax
-    \input{inc/sp/aside3.tex}
     \input{inc/sp/consultoria.tex}
+    \input{inc/sp/aside3.tex}
   \else
     \input{inc/en/aside3.tex}
     \input{inc/en/consultoria.tex}
