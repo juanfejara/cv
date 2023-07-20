@@ -73,13 +73,20 @@
     ~
     \input{inc/sp/sinopsis.tex}
     ~
-    \input{inc/sp/objetivos.tex}
+    \input{inc/sp/summary.tex}
+    ~
+    %\input{inc/sp/objetivos.tex}
+    \input{inc/sp/skills.tex}
   \else
     \input{inc/en/aside1.tex}
     ~
     \input{inc/en/sinopsis.tex}
     ~
-    \input{inc/en/objetivos.tex}
+    \input{inc/en/summary.tex}
+    ~
+    %\input{inc/en/objetivos.tex}
+    \input{inc/en/skills.tex}
+    \newpage
   \fi
 }
 
@@ -89,18 +96,18 @@
     \input{inc/sp/aside2.tex}
   \else
     \input{inc/en/experiencia.tex}
-    \newpage
+    %\newpage
   \fi
 }
 \newcommand\CVconsultoria[1]{
   \ifcase#1\relax
     \input{inc/sp/consultoria.tex}
     \input{inc/sp/aside3.tex}
+    \newpage
   \else
     \input{inc/en/aside3.tex}
     \input{inc/en/consultoria.tex}
   \fi
-  \newpage
   ~
 }
 
@@ -108,11 +115,11 @@
   \ifcase#1\relax
     \input{inc/sp/aside4.tex}
     \input{inc/sp/pedagogia.tex}
+    \newpage
   \else
     \input{inc/en/aside4.tex}
     \input{inc/en/pedagogia.tex}
   \fi
-  \newpage
 }
 
 \newcommand\CVeducacion[1]{
