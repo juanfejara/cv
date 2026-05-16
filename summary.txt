@@ -1,0 +1,7 @@
+Results-driven software developer with 25+ years of expertise in building robust, scalable systems for high-volume enterprises. Combines a unique academic foundation (BSc in Physics, Minor in Math/CS, postgraduate in Actuarial
+Sciences) with deep practical skills in software development, data engineering, and statistical analysis.
+Proficient across multiple programming paradigms and technologies—including SQL/NoSQL, ETL, Big Data, and embedded systems—enabling rapid mastery of new tools and languages. A collaborative team player who excels as both a hands-on
+developer and a mentor in Agile and Clean Code best practices. Passionate about applying advanced analytics,
+Deep Learning, and AI to solve complex engineering challenges.
+
+
