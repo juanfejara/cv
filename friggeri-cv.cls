@@ -117,7 +117,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{pblue}%
+      \fontsize{14pt}{24pt}\color{red}%pblue}%
       \bodyfont #3%
     };
   \end{tikzpicture}
